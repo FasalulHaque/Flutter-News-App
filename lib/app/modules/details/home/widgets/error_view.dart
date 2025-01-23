@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../../../core/utils/imports.dart';
 
 class ErrorView extends StatelessWidget {
   final String message;
@@ -21,7 +21,7 @@ class ErrorView extends StatelessWidget {
             size: 48,
             color: Colors.red,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: ResponsiveHelper.screenHeight(context) * 0.012),
           const Text(
             'Error loading news',
             style: TextStyle(
@@ -29,7 +29,7 @@ class ErrorView extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: ResponsiveHelper.screenHeight(context) * 0.006),
           Text(
             message,
             textAlign: TextAlign.center,

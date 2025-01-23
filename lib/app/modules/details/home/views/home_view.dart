@@ -1,12 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import '../controllers/home_controller.dart';
-import '../widgets/article_card.dart';
-import '../widgets/search_bar.dart';
-import '../widgets/error_view.dart';
-import '../widgets/top_headlines_section.dart';
+
+import '../../../../core/utils/imports.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -59,8 +53,8 @@ class HomeView extends GetView<HomeController> {
                           controller.searchQuery.isEmpty
                               ? 'All News'
                               : 'Search Results',
-                          style: const TextStyle(
-                            fontSize: 20,
+                          style: GoogleFonts.acme(
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         )),
@@ -83,7 +77,9 @@ class HomeView extends GetView<HomeController> {
                               size: 48,
                               color: Colors.grey,
                             ),
-                            const SizedBox(height: 16),
+                            SizedBox(
+                                height: ResponsiveHelper.screenHeight(context) *
+                                    0.01),
                             Text(
                               'No results found for "${controller.searchQuery.value}"',
                               style: const TextStyle(

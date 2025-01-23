@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:news_app/app/data/models/article_model.dart';
-import 'package:news_app/app/modules/details/home/widgets/news_image_placeholder.dart';
-import 'package:news_app/routes/app_pages.dart';
+import '../../../../core/utils/imports.dart';
 
 class ArticleCard extends StatelessWidget {
   final Article article;
@@ -13,7 +9,9 @@ class ArticleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: const Color.fromARGB(255, 237, 242, 252),
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      margin: EdgeInsets.symmetric(
+          horizontal: ResponsiveHelper.screenWidth(context) * 0.024,
+          vertical: ResponsiveHelper.screenHeight(context) * 0.011),
       child: InkWell(
         onTap: () => Get.toNamed(Routes.details, arguments: article),
         child: Column(
@@ -41,7 +39,8 @@ class ArticleCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(
+                      height: ResponsiveHelper.screenHeight(context) * 0.005),
                   Text(
                     article.description,
                     style: TextStyle(
@@ -51,7 +50,8 @@ class ArticleCard extends StatelessWidget {
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(
+                      height: ResponsiveHelper.screenHeight(context) * 0.012),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

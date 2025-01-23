@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:news_app/app/core/utils/responsive_helper.dart';
-import 'package:news_app/app/data/models/article_model.dart';
-import 'package:news_app/app/modules/details/home/widgets/news_image_placeholder.dart';
-import 'package:news_app/routes/app_pages.dart';
+import '../../../../core/utils/imports.dart';
 
 class TopHeadlineCard extends StatelessWidget {
   final Article article;
@@ -48,7 +43,9 @@ class TopHeadlineCard extends StatelessWidget {
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      const SizedBox(height: 7),
+                      SizedBox(
+                          height:
+                              ResponsiveHelper.screenHeight(context) * 0.005),
                       const Spacer(),
                       Text(
                         article.sourceName,
@@ -57,7 +54,9 @@ class TopHeadlineCard extends StatelessWidget {
                           color: Colors.blue,
                         ),
                       ),
-                      const SizedBox(height: 3),
+                      SizedBox(
+                          height:
+                              ResponsiveHelper.screenHeight(context) * 0.003),
                       Text(
                         article.publishedAt,
                         style: TextStyle(
@@ -73,6 +72,6 @@ class TopHeadlineCard extends StatelessWidget {
           ),
         ),
       ),
-    ).paddingOnly(bottom: ResponsiveHelper.screenHeight(context) * 0.003);
+    ).paddingOnly(bottom: ResponsiveHelper.screenHeight(context) * 0.002);
   }
 }

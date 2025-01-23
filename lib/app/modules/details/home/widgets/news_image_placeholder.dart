@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import '../../../../core/utils/imports.dart';
 
 class NewsImagePlaceholder extends StatelessWidget {
   final String? imageUrl;

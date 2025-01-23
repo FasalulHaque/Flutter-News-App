@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:news_app/app/core/utils/responsive_helper.dart';
-import 'package:news_app/app/modules/details/home/widgets/error_view.dart';
-import '../controllers/home_controller.dart';
+import '../../../../core/utils/imports.dart';
 import 'top_headline_card.dart';
 
 class TopHeadlinesSection extends GetView<HomeController> {
@@ -21,9 +16,8 @@ class TopHeadlinesSection extends GetView<HomeController> {
             children: [
               Text(
                 'Top Headlines',
-                style: GoogleFonts.roboto(
+                style: GoogleFonts.acme(
                   fontSize: 18,
-                  height: 1.5,
                   fontWeight: FontWeight.bold,
                 ),
               ),

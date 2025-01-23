@@ -1,0 +1,15 @@
+export 'package:flutter/material.dart';
+export 'package:get/get.dart';
+export 'package:google_fonts/google_fonts.dart';
+export 'package:news_app/app/core/utils/responsive_helper.dart';
+export 'package:news_app/app/modules/details/home/widgets/error_view.dart';
+export 'package:cached_network_image/cached_network_image.dart';
+export 'package:news_app/app/data/models/article_model.dart';
+export 'package:news_app/routes/app_pages.dart';
+export 'package:news_app/app/modules/details/home/widgets/news_image_placeholder.dart';
+export 'package:news_app/app/modules/details/home/controllers/home_controller.dart';
+export 'package:news_app/app/modules/details/home/widgets/article_card.dart';
+export 'package:news_app/app/modules/details/home/widgets/search_bar.dart';
+export 'package:news_app/app/modules/details/home/widgets/top_headlines_section.dart';
+export 'package:news_app/app/data/providers/api_provider.dart';
+export 'package:news_app/app/data/repositories/news_repository.dart';

@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:news_app/app/core/utils/responsive_helper.dart';
-import 'package:news_app/app/modules/details/home/widgets/news_image_placeholder.dart';
-import '../controllers/details_controller.dart';
+import 'package:news_app/app/modules/details/controllers/details_controller.dart';
+
+import '../../../core/utils/imports.dart';
 
 class DetailsView extends GetView<DetailsController> {
   const DetailsView({super.key});
@@ -53,7 +50,9 @@ class DetailsView extends GetView<DetailsController> {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(
+                              height: ResponsiveHelper.screenHeight(context) *
+                                  0.005),
                           Row(
                             children: [
                               const Icon(Icons.calendar_today, size: 16),
@@ -67,7 +66,9 @@ class DetailsView extends GetView<DetailsController> {
                             ],
                           ),
                           if (controller.article.value?.author != null) ...[
-                            const SizedBox(height: 8),
+                            SizedBox(
+                                height: ResponsiveHelper.screenHeight(context) *
+                                    0.005),
                             Row(
                               children: [
                                 const Icon(Icons.person, size: 16),
@@ -92,7 +93,9 @@ class DetailsView extends GetView<DetailsController> {
                             ),
                           ),
                           if (controller.article.value?.content != null) ...[
-                            const SizedBox(height: 16),
+                            SizedBox(
+                                height: ResponsiveHelper.screenHeight(context) *
+                                    0.011),
                             Text(
                               controller.article.value!.content!,
                               style: GoogleFonts.acme(
@@ -101,7 +104,9 @@ class DetailsView extends GetView<DetailsController> {
                               ),
                             ),
                           ],
-                          const SizedBox(height: 24),
+                          SizedBox(
+                              height: ResponsiveHelper.screenHeight(context) *
+                                  0.011),
                           if (controller.article.value?.url != null)
                             Center(
                               child: ElevatedButton.icon(

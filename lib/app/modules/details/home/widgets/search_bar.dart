@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../../../core/utils/imports.dart';
 
 class NewsSearchBar extends StatelessWidget {
   final Function(String) onSearch;
